@@ -14,10 +14,10 @@ do
 
 	if acpi -a | grep off-line > /dev/null
 	then
-		BAT="Bat. $(acpi -b | awk '{ print $4 }' | tr -d ',')"
-		xsetroot -name "$BAT $VOL $TEMP $LOCALTIME"
+		BAT="V. $(acpi -b | awk '{ print $4 }' | tr -d ',')"
+		xsetroot -name "$BAT t.$VOL $TEMP $LOCALTIME"
 	else
-		xsetroot -name "$VOL $TEMP $LOCALTIME"
+		xsetroot -name "$VOL t.$TEMP $LOCALTIME"
 	fi
 	sleep 20s
 done &
